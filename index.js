@@ -1,4 +1,3 @@
-const cool = require('cool-ascii-faces')
 const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5000
@@ -8,7 +7,6 @@ var app = express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .get('/', (req, res) => res.render('pages/index'))
-  .get('/cool', (req, res) => res.send(cool()))
 
   app.get('/times', (req, res) => {
 	  let result = ''
